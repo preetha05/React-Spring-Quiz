@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { LayoutDashboard, CreditCard, BookCheck, Cog } from 'lucide-react'
+import { LayoutDashboard, CreditCard, BookCheck, Cog, Mail, Users, Globe } from 'lucide-react'
 const AdminLeftbar = () => {
     const navigate = useNavigate()
     const UserLinks = [
@@ -10,14 +10,29 @@ const AdminLeftbar = () => {
             icon: LayoutDashboard
         },
         {
-            title: 'Membership',
-            path: '/admin/membership',
+            title: 'Memberships',
+            path: '/admin/plans',
             icon: CreditCard
         },
         {
-            title: 'MCQ',
+            title: 'Assesments',
             path: '/admin/assesments',
             icon: BookCheck
+        },
+        {
+            title: 'Users',
+            path: '/admin/users',
+            icon: Users
+        },
+        {
+            title: 'Mails',
+            path: '/admin/support',
+            icon: Mail
+        },
+        {
+            title: 'Configs',
+            path: '/admin/siteconfigs',
+            icon: Globe
         },
         {
             title: 'Settings',
@@ -30,9 +45,10 @@ const AdminLeftbar = () => {
     }
     return (
         <>
+
             <div className='w-[15vw] bg-orange-50/20 shadow-md shadow-orange-500 flex flex-col'>
                 <div className='h-[5vh] bg-orange-100/10 text-black flex items-center justify-center w-full font-bold border-b-2'>
-                    <span className='text-orange-500'> Admin </span>
+                    MCQ<span className='text-orange-500 px-1'> Admin </span>
                 </div>
                 <div className='h-[90vh] flex flex-col gap-1'>
                     {
